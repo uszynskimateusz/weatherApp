@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2103763D2C98BA46009B17E1 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2103763C2C98BA46009B17E1 /* HttpMethod.swift */; };
+		210376412C98BD44009B17E1 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210376402C98BD44009B17E1 /* HttpError.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35CF2C95CAF1008E6220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CE2C95CAF1008E6220 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2103763C2C98BA46009B17E1 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		210376402C98BD44009B17E1 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2103763C2C98BA46009B17E1 /* HttpMethod.swift */,
+				210376402C98BD44009B17E1 /* HttpError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				214E35CF2C95CAF1008E6220 /* ViewController.swift in Sources */,
+				210376412C98BD44009B17E1 /* HttpError.swift in Sources */,
 				214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */,
 				2103763D2C98BA46009B17E1 /* HttpMethod.swift in Sources */,
 				21E1FF472C96D03800F2C658 /* AppCoordinator.swift in Sources */,
