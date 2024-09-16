@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2103763B2C98BA0C009B17E1 /* HttpEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2103763A2C98BA0C009B17E1 /* HttpEndpointProtocol.swift */; };
 		2103763D2C98BA46009B17E1 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2103763C2C98BA46009B17E1 /* HttpMethod.swift */; };
 		210376412C98BD44009B17E1 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210376402C98BD44009B17E1 /* HttpError.swift */; };
   		210376452C98BE6F009B17E1 /* HttpDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210376442C98BE6F009B17E1 /* HttpDeserializer.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2103763A2C98BA0C009B17E1 /* HttpEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpEndpointProtocol.swift; sourceTree = "<group>"; };
 		2103763C2C98BA46009B17E1 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		210376402C98BD44009B17E1 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
   		210376442C98BE6F009B17E1 /* HttpDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDeserializer.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		210376372C98B9E0009B17E1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2103763A2C98BA0C009B17E1 /* HttpEndpointProtocol.swift */,
 				2103763C2C98BA46009B17E1 /* HttpMethod.swift */,
 				210376402C98BD44009B17E1 /* HttpError.swift */,
                 210376442C98BE6F009B17E1 /* HttpDeserializer.swift */,
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2103763B2C98BA0C009B17E1 /* HttpEndpointProtocol.swift in Sources */,
 				214E35CF2C95CAF1008E6220 /* ViewController.swift in Sources */,
 				210376412C98BD44009B17E1 /* HttpError.swift in Sources */,
 				214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */,
