@@ -1,10 +1,10 @@
 //
-//  SearchHistory.swift
+//  SearchCity.swift
 //
 
 import Foundation
 
-public struct SearchHistoryCity: Codable, Hashable {
+public struct SearchCity: Codable, Hashable {
     let city: AutocompleteCity
     let date: Date
 }

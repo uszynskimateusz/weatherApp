@@ -8,7 +8,12 @@ class WelcomeCoordinator: BaseCoordinator {
     override func start() {
         let httpClient = HttpClient()
         let autocompleteCitiesService = AutocompleteCitiesService(httpClient: httpClient)
-        let viewModel = WelcomeViewModel(delegate: self, autocompleteCitiesService: autocompleteCitiesService)
+        let persistence = Persistence()
+        let viewModel = WelcomeViewModel(
+            delegate: self,
+            autocompleteCitiesService: autocompleteCitiesService,
+            persistence: persistence
+        )
         let welcomeViewController = WelcomeViewController(viewModel: viewModel)
         navigationController.setViewControllers([welcomeViewController], animated: false)
     }
