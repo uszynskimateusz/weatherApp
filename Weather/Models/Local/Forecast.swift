@@ -27,6 +27,12 @@ public struct DailyForecast {
         ISO8601DateFormatter().date(from: date) ?? Date()
     }
 
+    var formattedDateValue: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM"
+        return formatter.string(from: dateValue)
+    }
+
     var isToday: Bool {
         Calendar.current.isDateInToday(dateValue)
     }
