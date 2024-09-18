@@ -35,6 +35,7 @@ final class WelcomeViewLayout: UIView {
     }()
 
     let searchInput = SearchInput()
+    let searchHistory = SearchHistory()
 
     private var flowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -43,10 +44,16 @@ final class WelcomeViewLayout: UIView {
         return flowLayout
     }()
 
+    private let stackView = UIStackView()
+    private let collectionHeaderLabel = UILabel()
+
     private func setup() {
         backgroundColor = Color.gray
 
         setupSearchInput()
+        setupStackView()
+        setupSearchHistory()
+        setupCollectionHeaderLabel()
         setupCollectionView()
     }
 
@@ -62,14 +69,38 @@ final class WelcomeViewLayout: UIView {
         ])
     }
 
-    private func setupCollectionView() {
-        addSubview(collectionView)
+    private func setupStackView() {
+        addSubview(stackView)
+
+        stackView.axis = .vertical
+        stackView.spacing = 12
+        stackView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: searchInput.bottomAnchor, constant: Constants.margin),
-            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.margin),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.margin)
+            stackView.topAnchor.constraint(equalTo: searchInput.bottomAnchor, constant: Constants.margin),
+            stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.margin),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.margin),
         ])
+    }
+
+    private func setupSearchHistory() {
+        stackView.addArrangedSubview(searchHistory)
+
+        searchHistory.isHidden = true
+        searchHistory.isUserInteractionEnabled = true
+    }
+
+    private func setupCollectionHeaderLabel() {
+        stackView.addArrangedSubview(collectionHeaderLabel)
+
+        collectionHeaderLabel.textColor = .black
+        collectionHeaderLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        collectionHeaderLabel.text = Strings.searchTitle
+        collectionHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    private func setupCollectionView() {
+        stackView.addArrangedSubview(collectionView)
     }
 }

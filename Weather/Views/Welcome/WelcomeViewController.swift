@@ -43,6 +43,10 @@ final class WelcomeViewController: UIViewController {
         layout.textDidChange = { [weak self] city in
             self?.viewModel.search(city)
         }
+
+        layout.searchHistory.onTap = { [weak self] city in
+            self?.viewModel.didSelectCity(city: city)
+        }
     }
 
     private func bindViewModel() {
@@ -53,6 +57,17 @@ final class WelcomeViewController: UIViewController {
                 self.layout.collectionView.reloadData()
             }
         }
+
+        viewModel.onHistoryUpdate = { [weak self] in
+            guard let self else { return }
+
+            DispatchQueue.main.async {
+                self.layout.searchHistory.configure(with: Array(self.viewModel.history.prefix(5)))
+                self.layout.searchHistory.isHidden = self.viewModel.history.isEmpty
+            }
+        }
+
+        viewModel.viewDidLoad()
     }
 }
 
@@ -96,6 +111,6 @@ extension WelcomeViewController: UICollectionViewDataSource, UICollectionViewDel
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        viewModel.didSelectCity(index: indexPath.row)
+        viewModel.didSelectCity(city: viewModel.cities[indexPath.row])
     }
 }
