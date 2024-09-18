@@ -17,6 +17,7 @@
 		21176B7A2C9B04CF0005F0DD /* AutocompleteCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */; };
 		21176B7D2C9B04EF0005F0DD /* AutocompleteCityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B7C2C9B04EC0005F0DD /* AutocompleteCityMapper.swift */; };
 		21176B802C9B052A0005F0DD /* AutocompleteCitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */; };
+		21176B8E2C9B0CD20005F0DD /* DailyForecastEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B8D2C9B0CCF0005F0DD /* DailyForecastEndpoint.swift */; };
 		21176B902C9B0CF20005F0DD /* ForecastDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */; };
 		21176B922C9B0D080005F0DD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B912C9B0D070005F0DD /* Forecast.swift */; };
 		21176B942C9B0D370005F0DD /* ForecastMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B932C9B0D360005F0DD /* ForecastMapper.swift */; };
@@ -70,6 +71,7 @@
 		21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCity.swift; sourceTree = "<group>"; };
 		21176B7C2C9B04EC0005F0DD /* AutocompleteCityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCityMapper.swift; sourceTree = "<group>"; };
 		21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCitiesService.swift; sourceTree = "<group>"; };
+		21176B8D2C9B0CCF0005F0DD /* DailyForecastEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastEndpoint.swift; sourceTree = "<group>"; };
 		21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDTO.swift; sourceTree = "<group>"; };
 		21176B912C9B0D070005F0DD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		21176B932C9B0D360005F0DD /* ForecastMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMapper.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		21DD8FE52C9A25AE0049EA2C /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				21176B8D2C9B0CCF0005F0DD /* DailyForecastEndpoint.swift */,
 				21DD8FE72C9A25BD0049EA2C /* AutocompleteSearchEndpoint.swift */,
 			);
 			path = Endpoints;
@@ -470,6 +473,7 @@
 				21C292E32C98C69800C929D3 /* AppConstants.swift in Sources */,
 				21DD8FE12C9A0A420049EA2C /* SearchInput.swift in Sources */,
 				21DD8FDD2C9A09770049EA2C /* WelcomeViewModel.swift in Sources */,
+				21176B8E2C9B0CD20005F0DD /* DailyForecastEndpoint.swift in Sources */,
 				210376452C98BE6F009B17E1 /* HttpDeserializer.swift in Sources */,
 				21176B762C9B044E0005F0DD /* Strings.swift in Sources */,
 				214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */,
