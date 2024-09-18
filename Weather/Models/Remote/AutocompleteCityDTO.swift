@@ -1,8 +1,8 @@
 //
-//  AutocompleteCity.swift
+//  AutocompleteCityDTO.swift
 //
 
-struct AutocompleteCity: Decodable {
+struct AutocompleteCityDTO: Decodable {
     let localizedName: String
     let key: String
     let rank: Int
