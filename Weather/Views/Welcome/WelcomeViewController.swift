@@ -22,12 +22,17 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTitle()
         setupLayout()
         bindViewModel()
     }
 
     private let layout = WelcomeViewLayout()
     private var viewModel: WelcomeViewModelProtocol
+
+    private func setupTitle() {
+        title = Strings.welcomeTitle
+    }
 
     private func setupLayout() {
         layout.searchInput.textFieldDelegate = self
