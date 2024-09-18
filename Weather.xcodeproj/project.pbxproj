@@ -19,6 +19,7 @@
 		21176B802C9B052A0005F0DD /* AutocompleteCitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */; };
 		21176B902C9B0CF20005F0DD /* ForecastDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */; };
 		21176B922C9B0D080005F0DD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B912C9B0D070005F0DD /* Forecast.swift */; };
+		21176B942C9B0D370005F0DD /* ForecastMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B932C9B0D360005F0DD /* ForecastMapper.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35D42C95CAF1008E6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D32C95CAF1008E6220 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCitiesService.swift; sourceTree = "<group>"; };
 		21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDTO.swift; sourceTree = "<group>"; };
 		21176B912C9B0D070005F0DD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		21176B932C9B0D360005F0DD /* ForecastMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMapper.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		21176B7B2C9B04E50005F0DD /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				21176B932C9B0D360005F0DD /* ForecastMapper.swift */,
 				21176B7C2C9B04EC0005F0DD /* AutocompleteCityMapper.swift */,
 			);
 			path = Mappers;
@@ -477,6 +480,7 @@
 				21176B802C9B052A0005F0DD /* AutocompleteCitiesService.swift in Sources */,
 				21936A902C95E82F00ED09CC /* WelcomeViewLayout.swift in Sources */,
 				21E1FF412C96CF5700F2C658 /* Coordinator.swift in Sources */,
+				21176B942C9B0D370005F0DD /* ForecastMapper.swift in Sources */,
 				21DD8FEB2C9A266B0049EA2C /* AutocompleteCityDTO.swift in Sources */,
 				21E1FF432C96CF8A00F2C658 /* BaseCoordinator.swift in Sources */,
 				21176B922C9B0D080005F0DD /* Forecast.swift in Sources */,
