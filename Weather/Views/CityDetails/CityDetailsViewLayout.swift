@@ -13,6 +13,8 @@ final class CityDetailsViewLayout: UIView {
     private let headlineLabel = UILabel()
     private let maxTemperatureLabel = UILabel()
     private let minTemperatureLabel = UILabel()
+    private let nextDaysLabel = UILabel()
+    private let nextDaysStackView = UIStackView()
 
     init() {
         super.init(frame: .zero)
@@ -35,6 +37,12 @@ final class CityDetailsViewLayout: UIView {
             minTemperatureLabel.textColor = todayForecast.minimumTemperatureColor
             minTemperatureLabel.text = todayForecast.minimumTemperature
         }
+
+        forecast.dailyForecasts.filter { !$0.isToday }.forEach { day in
+            let dayForecast = DayForecast()
+            dayForecast.configure(temperature: day.maximumTemperature, date: day.formattedDateValue)
+            nextDaysStackView.addArrangedSubview(dayForecast)
+        }
     }
 
     private func setup() {
@@ -44,6 +52,8 @@ final class CityDetailsViewLayout: UIView {
         setupHeadlineLabel()
         setupMaxTemperatureLabel()
         setupMinTemperatureLabel()
+        setupNextDaysLabel()
+        setupNextDaysStackView()
     }
 
     private func setupStackView() {
@@ -55,7 +65,7 @@ final class CityDetailsViewLayout: UIView {
 
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Constants.margin),
-            stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -Constants.margin),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -Constants.margin),
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Constants.margin),
             stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -Constants.margin)
         ])
@@ -73,7 +83,7 @@ final class CityDetailsViewLayout: UIView {
     private func setupMaxTemperatureLabel() {
         stackView.addArrangedSubview(maxTemperatureLabel)
 
-        maxTemperatureLabel.font = UIFont.systemFont(ofSize: 32, weight: .heavy)
+        maxTemperatureLabel.font = UIFont.systemFont(ofSize: 48, weight: .heavy)
         maxTemperatureLabel.numberOfLines = 0
         maxTemperatureLabel.textAlignment = .center
     }
@@ -84,5 +94,28 @@ final class CityDetailsViewLayout: UIView {
         minTemperatureLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         minTemperatureLabel.numberOfLines = 0
         minTemperatureLabel.textAlignment = .center
+    }
+
+    private func setupNextDaysLabel() {
+        stackView.addArrangedSubview(nextDaysLabel)
+
+        nextDaysLabel.text = Strings.nextDays
+        nextDaysLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        nextDaysLabel.numberOfLines = 0
+        nextDaysLabel.textAlignment = .center
+    }
+
+    private func setupNextDaysStackView() {
+        stackView.addArrangedSubview(nextDaysStackView)
+
+        nextDaysStackView.translatesAutoresizingMaskIntoConstraints = false
+        nextDaysStackView.distribution = .fillEqually
+        nextDaysStackView.alignment = .center
+
+        NSLayoutConstraint.activate([
+            nextDaysStackView.heightAnchor.constraint(equalToConstant: 50),
+            nextDaysStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: Constants.margin),
+            nextDaysStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -Constants.margin)
+        ])
     }
 }
