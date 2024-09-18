@@ -5,6 +5,8 @@
 import UIKit
 
 class CityCell: UICollectionViewCell {
+    static let reuseIdentifier = "CityCell"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
 

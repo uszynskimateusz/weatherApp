@@ -13,7 +13,7 @@ public protocol HttpEndpointProtocol {
 
 public extension HttpEndpointProtocol {
     var baseUrl: URL {
-        Constants.baseUrl
+        AppConstants.baseUrl
     }
 
     var method: HttpMethod {

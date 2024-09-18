@@ -26,6 +26,7 @@ final class SearchInput: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    var textDidChange: ((String?) -> Void)?
     var textFieldDelegate: UITextFieldDelegate? {
         didSet {
             textField.delegate = textFieldDelegate
@@ -104,11 +105,13 @@ final class SearchInput: UIView {
 
     @objc private func didTextChange() {
         determineClearTextButtonVisiblity()
+        textDidChange?(textField.text)
     }
 
     @objc private func clearTextButtonDidTapped() {
         textField.text = nil
         textField.resignFirstResponder()
+        didTextChange()
         determineClearTextButtonVisiblity()
     }
 
