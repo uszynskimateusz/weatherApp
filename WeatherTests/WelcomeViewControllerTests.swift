@@ -20,9 +20,9 @@ final class WelcomeViewControllerTests: XCTestCase {
             AutocompleteCity(localizedName: "Wadżdza", key: "1", rank: 1),
             AutocompleteCity(localizedName: "Warszawa", key: "2", rank: 2)
         ]
-        let welcomeViewController = WelcomeViewController(viewModel: welcomeViewModel)
-        welcomeViewController.viewDidLoad()
+        let sut = WelcomeViewController(viewModel: welcomeViewModel)
+        sut.viewDidLoad()
 
-        assertSnapshot(of: welcomeViewController, as: .image)
+        assertSnapshot(of: sut, as: .image(on: .iPhone13ProMax))
     }
 }
