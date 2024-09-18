@@ -40,7 +40,7 @@ final class CityDetailsViewController: UIViewController {
     private func setupNavigationBar() {
         title = viewModel.title
         let backButton = UIBarButtonItem(
-            image: UIImage(systemName: "chevron.left"),
+            image: Images.chevronIcon,
             style: .plain,
             target: self,
             action: #selector(backButtonTapped)

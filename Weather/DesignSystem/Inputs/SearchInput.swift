@@ -11,8 +11,6 @@ final class SearchInput: UIView {
         static let color: UIColor = .lightGray
         static let margin: CGFloat = 12.0
         static let height: CGFloat = 48.0
-        static let searchIcon: String = "magnifyingglass"
-        static let clearIcon: String = "x.circle"
         static let iconSize: CGSize = CGSize(width: 24, height: 24)
     }
 
@@ -71,7 +69,7 @@ final class SearchInput: UIView {
         stackView.addArrangedSubview(searchIconView)
 
         searchIconView.translatesAutoresizingMaskIntoConstraints = false
-        searchIconView.image = UIImage(systemName: Constants.searchIcon)
+        searchIconView.image = Images.searchIcon
         searchIconView.tintColor = Constants.color
 
         NSLayoutConstraint.activate([
@@ -92,7 +90,7 @@ final class SearchInput: UIView {
     private func setupClearTextButton() {
         stackView.addArrangedSubview(clearTextButton)
 
-        clearTextButton.setImage(UIImage(systemName: Constants.clearIcon), for: .normal)
+        clearTextButton.setImage(Images.clearIcon, for: .normal)
         clearTextButton.tintColor = .black
         clearTextButton.isHidden = true
         clearTextButton.addTarget(self, action: #selector(clearTextButtonDidTapped), for: .touchUpInside)
