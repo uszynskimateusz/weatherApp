@@ -17,6 +17,8 @@
 		21176B7A2C9B04CF0005F0DD /* AutocompleteCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */; };
 		21176B7D2C9B04EF0005F0DD /* AutocompleteCityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B7C2C9B04EC0005F0DD /* AutocompleteCityMapper.swift */; };
 		21176B802C9B052A0005F0DD /* AutocompleteCitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */; };
+		21176B902C9B0CF20005F0DD /* ForecastDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */; };
+		21176B922C9B0D080005F0DD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B912C9B0D070005F0DD /* Forecast.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35D42C95CAF1008E6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D32C95CAF1008E6220 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCity.swift; sourceTree = "<group>"; };
 		21176B7C2C9B04EC0005F0DD /* AutocompleteCityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCityMapper.swift; sourceTree = "<group>"; };
 		21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCitiesService.swift; sourceTree = "<group>"; };
+		21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDTO.swift; sourceTree = "<group>"; };
+		21176B912C9B0D070005F0DD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		21176B772C9B04A80005F0DD /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */,
 				21DD8FEA2C9A26630049EA2C /* AutocompleteCityDTO.swift */,
 			);
 			path = Remote;
@@ -154,6 +159,7 @@
 		21176B782C9B04B60005F0DD /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				21176B912C9B0D070005F0DD /* Forecast.swift */,
 				21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */,
 			);
 			path = Local;
@@ -456,6 +462,7 @@
 				2103763D2C98BA46009B17E1 /* HttpMethod.swift in Sources */,
 				21DD8FDB2C9A07ED0049EA2C /* Color.swift in Sources */,
 				21E1FF472C96D03800F2C658 /* AppCoordinator.swift in Sources */,
+				21176B902C9B0CF20005F0DD /* ForecastDTO.swift in Sources */,
 				21176B7A2C9B04CF0005F0DD /* AutocompleteCity.swift in Sources */,
 				21C292E32C98C69800C929D3 /* AppConstants.swift in Sources */,
 				21DD8FE12C9A0A420049EA2C /* SearchInput.swift in Sources */,
@@ -472,6 +479,7 @@
 				21E1FF412C96CF5700F2C658 /* Coordinator.swift in Sources */,
 				21DD8FEB2C9A266B0049EA2C /* AutocompleteCityDTO.swift in Sources */,
 				21E1FF432C96CF8A00F2C658 /* BaseCoordinator.swift in Sources */,
+				21176B922C9B0D080005F0DD /* Forecast.swift in Sources */,
 				21DD8FE82C9A25D30049EA2C /* AutocompleteSearchEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
