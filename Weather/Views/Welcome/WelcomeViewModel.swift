@@ -21,10 +21,10 @@ final class WelcomeViewModel {
         }
     }
 
-    private let httpClient: HttpClientProtocol
+    private let autocompleteCitiesService: AutocompleteCitiesServiceProtocol
 
-    init(httpClient: HttpClientProtocol) {
-        self.httpClient = httpClient
+    init(autocompleteCitiesService: AutocompleteCitiesServiceProtocol) {
+        self.autocompleteCitiesService = autocompleteCitiesService
     }
 }
 
@@ -37,9 +37,7 @@ extension WelcomeViewModel: WelcomeViewModelProtocol {
 
         Task {
             do {
-                let endpoint = AutocompleteSearchEndpoint(city: city)
-                let autocompleteCities: [AutocompleteCity] = try await httpClient.request(route: endpoint)
-                self.cities = autocompleteCities.sorted { $0.rank < $1.rank}
+                self.cities = try await autocompleteCitiesService.fetchAutocompleteCities(city: city)
             } catch {
                 print(error)
             }
