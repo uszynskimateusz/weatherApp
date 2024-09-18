@@ -14,6 +14,7 @@ final class CityDetailsViewLayout: UIView {
     private let maxTemperatureLabel = UILabel()
     private let temperatureLabel = UILabel()
     private let minTemperatureLabel = UILabel()
+    private let weatherConditions = WeatherConditions()
     private let nextDaysForecast = NextDaysForecast()
 
     init() {
@@ -35,6 +36,11 @@ final class CityDetailsViewLayout: UIView {
             maxTemperatureLabel.textColor = todayForecast.maximumTemperatureColor
             maxTemperatureLabel.text = todayForecast.maximumTemperature
             minTemperatureLabel.attributedText = buildAttributedText(forecast: todayForecast)
+            weatherConditions.configure(with: [
+                .wind(todayForecast.wind),
+                .rain(todayForecast.rain),
+                .snow(todayForecast.snow)
+            ])
         }
 
         nextDaysForecast.configure(with: forecast.dailyForecasts.filter { !$0.isToday })
@@ -47,6 +53,7 @@ final class CityDetailsViewLayout: UIView {
         setupHeadlineLabel()
         setupMaxTemperatureLabel()
         setupMinTemperatureLabel()
+        setupWeatherConditions()
         setupNextDaysForecast()
     }
 
@@ -89,13 +96,23 @@ final class CityDetailsViewLayout: UIView {
         minTemperatureLabel.textAlignment = .center
     }
 
+    private func setupWeatherConditions() {
+        stackView.addArrangedSubview(weatherConditions)
+
+        weatherConditions.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            weatherConditions.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: Constants.margin),
+            weatherConditions.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -Constants.margin)
+        ])
+    }
+
     private func setupNextDaysForecast() {
         stackView.addArrangedSubview(nextDaysForecast)
 
         nextDaysForecast.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-   /*         nextDaysForecast.heightAnchor.constraint(equalToConstant: 50)*/
             nextDaysForecast.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: Constants.margin),
             nextDaysForecast.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -Constants.margin)
         ])

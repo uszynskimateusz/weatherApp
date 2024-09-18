@@ -23,6 +23,8 @@ final class NextDaysForecast: UIView {
     }
 
     func configure(with dailyForecasts: [DailyForecast]) {
+        nextDaysLabel.isHidden = false
+
         dailyForecasts.forEach { day in
             let dayForecast = DayForecast()
             dayForecast.configure(temperature: day.maximumTemperature, date: day.formattedDateValue)
@@ -43,6 +45,7 @@ final class NextDaysForecast: UIView {
         nextDaysLabel.numberOfLines = 0
         nextDaysLabel.textAlignment = .center
         nextDaysLabel.translatesAutoresizingMaskIntoConstraints = false
+        nextDaysLabel.isHidden = true
 
         NSLayoutConstraint.activate([
             nextDaysLabel.topAnchor.constraint(equalTo: topAnchor),
