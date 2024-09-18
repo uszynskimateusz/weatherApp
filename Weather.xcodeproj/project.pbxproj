@@ -21,6 +21,7 @@
 		21176B902C9B0CF20005F0DD /* ForecastDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */; };
 		21176B922C9B0D080005F0DD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B912C9B0D070005F0DD /* Forecast.swift */; };
 		21176B942C9B0D370005F0DD /* ForecastMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B932C9B0D360005F0DD /* ForecastMapper.swift */; };
+		21176B962C9B0D640005F0DD /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B952C9B0D5E0005F0DD /* ForecastService.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35D42C95CAF1008E6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D32C95CAF1008E6220 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		21176B8F2C9B0CF10005F0DD /* ForecastDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDTO.swift; sourceTree = "<group>"; };
 		21176B912C9B0D070005F0DD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		21176B932C9B0D360005F0DD /* ForecastMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMapper.swift; sourceTree = "<group>"; };
+		21176B952C9B0D5E0005F0DD /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		21176B7E2C9B051A0005F0DD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				21176B952C9B0D5E0005F0DD /* ForecastService.swift */,
 				21176B7F2C9B05210005F0DD /* AutocompleteCitiesService.swift */,
 			);
 			path = Services;
@@ -488,6 +491,7 @@
 				21DD8FEB2C9A266B0049EA2C /* AutocompleteCityDTO.swift in Sources */,
 				21E1FF432C96CF8A00F2C658 /* BaseCoordinator.swift in Sources */,
 				21176B922C9B0D080005F0DD /* Forecast.swift in Sources */,
+				21176B962C9B0D640005F0DD /* ForecastService.swift in Sources */,
 				21DD8FE82C9A25D30049EA2C /* AutocompleteSearchEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
