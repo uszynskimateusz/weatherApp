@@ -4,6 +4,10 @@
 
 import Foundation
 
+protocol WelcomeViewModelDelegate: AnyObject {
+    func showCityDetails(_ city: AutocompleteCity)
+}
+
 protocol WelcomeViewModelProtocol {
     var cities: [AutocompleteCity] { get set }
     var onUpdate: (() -> Void)? { get set }
@@ -21,9 +25,15 @@ final class WelcomeViewModel {
         }
     }
 
+    private weak var delegate: WelcomeViewModelDelegate?
+
     private let autocompleteCitiesService: AutocompleteCitiesServiceProtocol
 
-    init(autocompleteCitiesService: AutocompleteCitiesServiceProtocol) {
+    init(
+        delegate: WelcomeViewModelDelegate,
+        autocompleteCitiesService: AutocompleteCitiesServiceProtocol
+    ) {
+        self.delegate = delegate
         self.autocompleteCitiesService = autocompleteCitiesService
     }
 }
@@ -50,9 +60,6 @@ extension WelcomeViewModel: WelcomeViewModelProtocol {
     }
 
     func didSelectCity(index: Int) {
-        let city = cities[index]
-
-        // TODO: Show second screen with city details
-        print("Did select \(city.localizedName)")
+        delegate?.showCityDetails(cities[index])
     }
 }
