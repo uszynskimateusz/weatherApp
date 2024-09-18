@@ -14,6 +14,7 @@
 		210376452C98BE6F009B17E1 /* HttpDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210376442C98BE6F009B17E1 /* HttpDeserializer.swift */; };
 		210376472C98C0AD009B17E1 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210376462C98C0AD009B17E1 /* URLSessionProtocol.swift */; };
 		21176B762C9B044E0005F0DD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B752C9B044B0005F0DD /* Strings.swift */; };
+		21176B7A2C9B04CF0005F0DD /* AutocompleteCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35D42C95CAF1008E6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D32C95CAF1008E6220 /* Assets.xcassets */; };
@@ -30,7 +31,7 @@
 		21DD8FE12C9A0A420049EA2C /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD8FE02C9A0A3D0049EA2C /* SearchInput.swift */; };
 		21DD8FE42C9A1CBB0049EA2C /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD8FE32C9A1CB70049EA2C /* CityCell.swift */; };
 		21DD8FE82C9A25D30049EA2C /* AutocompleteSearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD8FE72C9A25BD0049EA2C /* AutocompleteSearchEndpoint.swift */; };
-		21DD8FEB2C9A266B0049EA2C /* AutocompleteCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD8FEA2C9A26630049EA2C /* AutocompleteCity.swift */; };
+		21DD8FEB2C9A266B0049EA2C /* AutocompleteCityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DD8FEA2C9A26630049EA2C /* AutocompleteCityDTO.swift */; };
 		21E1FF412C96CF5700F2C658 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E1FF402C96CF5700F2C658 /* Coordinator.swift */; };
 		21E1FF432C96CF8A00F2C658 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E1FF422C96CF8A00F2C658 /* BaseCoordinator.swift */; };
 		21E1FF472C96D03800F2C658 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E1FF462C96D03800F2C658 /* AppCoordinator.swift */; };
@@ -61,6 +62,7 @@
 		210376442C98BE6F009B17E1 /* HttpDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDeserializer.swift; sourceTree = "<group>"; };
 		210376462C98C0AD009B17E1 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		21176B752C9B044B0005F0DD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCity.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		21DD8FE02C9A0A3D0049EA2C /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 		21DD8FE32C9A1CB70049EA2C /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		21DD8FE72C9A25BD0049EA2C /* AutocompleteSearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteSearchEndpoint.swift; sourceTree = "<group>"; };
-		21DD8FEA2C9A26630049EA2C /* AutocompleteCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCity.swift; sourceTree = "<group>"; };
+		21DD8FEA2C9A26630049EA2C /* AutocompleteCityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCityDTO.swift; sourceTree = "<group>"; };
 		21E1FF402C96CF5700F2C658 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		21E1FF422C96CF8A00F2C658 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		21E1FF462C96D03800F2C658 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -129,10 +131,27 @@
 		210376482C98C605009B17E1 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				21176B752C9B044B0005F0DD /* Strings.swift */,
 				21DD8FDA2C9A07E90049EA2C /* Color.swift */,
 				21C292E22C98C69800C929D3 /* AppConstants.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		21176B772C9B04A80005F0DD /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				21DD8FEA2C9A26630049EA2C /* AutocompleteCityDTO.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		21176B782C9B04B60005F0DD /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				21176B792C9B04CE0005F0DD /* AutocompleteCity.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		214E35BE2C95CAF1008E6220 = {
@@ -245,7 +264,8 @@
 		21DD8FE92C9A26570049EA2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				21DD8FEA2C9A26630049EA2C /* AutocompleteCity.swift */,
+				21176B782C9B04B60005F0DD /* Local */,
+				21176B772C9B04A80005F0DD /* Remote */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +434,7 @@
 				2103763D2C98BA46009B17E1 /* HttpMethod.swift in Sources */,
 				21DD8FDB2C9A07ED0049EA2C /* Color.swift in Sources */,
 				21E1FF472C96D03800F2C658 /* AppCoordinator.swift in Sources */,
+				21176B7A2C9B04CF0005F0DD /* AutocompleteCity.swift in Sources */,
 				21C292E32C98C69800C929D3 /* AppConstants.swift in Sources */,
 				21DD8FE12C9A0A420049EA2C /* SearchInput.swift in Sources */,
 				21DD8FDD2C9A09770049EA2C /* WelcomeViewModel.swift in Sources */,
@@ -425,7 +446,7 @@
 				210376472C98C0AD009B17E1 /* URLSessionProtocol.swift in Sources */,
 				21936A902C95E82F00ED09CC /* WelcomeViewLayout.swift in Sources */,
 				21E1FF412C96CF5700F2C658 /* Coordinator.swift in Sources */,
-				21DD8FEB2C9A266B0049EA2C /* AutocompleteCity.swift in Sources */,
+				21DD8FEB2C9A266B0049EA2C /* AutocompleteCityDTO.swift in Sources */,
 				21E1FF432C96CF8A00F2C658 /* BaseCoordinator.swift in Sources */,
 				21DD8FE82C9A25D30049EA2C /* AutocompleteSearchEndpoint.swift in Sources */,
 			);
