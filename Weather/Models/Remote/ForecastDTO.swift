@@ -25,16 +25,18 @@ struct HeadlineDTO: Decodable {
 struct DailyForecastDTO: Decodable {
     let date: String
     let temperature: TemperatureDTO
+    let day: DayDTO
 
     enum CodingKeys: String, CodingKey {
         case date = "Date"
         case temperature = "Temperature"
+        case day = "Day"
     }
 }
 
 struct TemperatureDTO: Decodable {
-    let minimum: TemperatureValueDTO
-    let maximum: TemperatureValueDTO
+    let minimum: ValueDTO
+    let maximum: ValueDTO
 
     enum CodingKeys: String, CodingKey {
         case minimum = "Minimum"
@@ -42,7 +44,27 @@ struct TemperatureDTO: Decodable {
     }
 }
 
-struct TemperatureValueDTO: Decodable {
+struct DayDTO: Decodable {
+    let wind: WindDTO
+    let rain: ValueDTO
+    let snow: ValueDTO
+
+    enum CodingKeys: String, CodingKey {
+        case wind = "Wind"
+        case rain = "Rain"
+        case snow = "Snow"
+    }
+}
+
+struct WindDTO: Decodable {
+    let speed: ValueDTO
+
+    enum CodingKeys: String, CodingKey {
+        case speed = "Speed"
+    }
+}
+
+struct ValueDTO: Decodable {
     let value: Float
     let unit: String
 

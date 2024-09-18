@@ -17,10 +17,12 @@ public struct Forecast {
 public struct DailyForecast {
     private let date: String
     private let temperature: Temperature
+    private let day: Day
 
-    public init(date: String, temperature: Temperature) {
+    public init(date: String, temperature: Temperature, day: Day) {
         self.date = date
         self.temperature = temperature
+        self.day = day
     }
 
     var dateValue: Date {
@@ -52,6 +54,18 @@ public struct DailyForecast {
     var minimumTemperatureColor: UIColor {
         temperature.minimum.textColor
     }
+
+    var wind: String {
+        day.wind.speed.formattedValue
+    }
+
+    var rain: String {
+        day.rain.formattedValue
+    }
+
+    var snow: String {
+        day.snow.formattedValue
+    }
 }
 
 public struct Temperature {
@@ -61,6 +75,30 @@ public struct Temperature {
     public init(minimum: TemperatureValue, maximum: TemperatureValue) {
         self.minimum = minimum
         self.maximum = maximum
+    }
+}
+
+public struct Day {
+    let wind: Wind
+    let rain: Value
+    let snow: Value
+}
+
+public struct Wind {
+    let speed: Value
+}
+
+public struct Value {
+    private let value: Float
+    private let unit: String
+
+    public init(value: Float, unit: String) {
+        self.value = value
+        self.unit = unit
+    }
+
+    var formattedValue: String {
+        "\(value) \(unit)"
     }
 }
 

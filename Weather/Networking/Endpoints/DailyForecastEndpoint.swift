@@ -17,6 +17,7 @@ struct DailyForecastEndpoint: HttpEndpointProtocol {
     var queryParams: [String : Any] {
         [
             "apikey": AppConstants.apiKey,
+            "details": true,
             "metric": true,
             "language": "pl"
         ]
