@@ -40,6 +40,8 @@
 		21176BBA2C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB72C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift */; };
 		21176BBB2C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB82C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift */; };
 		21176BBC2C9B4EEE0005F0DD /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB62C9B4EEE0005F0DD /* PersistenceMock.swift */; };
+		21176BBE2C9B527B0005F0DD /* CityDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BBD2C9B52780005F0DD /* CityDetailsViewControllerTests.swift */; };
+		21176BC02C9B52D70005F0DD /* ForecastServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BBF2C9B52D20005F0DD /* ForecastServiceMock.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35D42C95CAF1008E6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D32C95CAF1008E6220 /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 		21176BB62C9B4EEE0005F0DD /* PersistenceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMock.swift; sourceTree = "<group>"; };
 		21176BB72C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		21176BB82C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModelDelegateMock.swift; sourceTree = "<group>"; };
+		21176BBD2C9B52780005F0DD /* CityDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		21176BBF2C9B52D20005F0DD /* ForecastServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceMock.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 		21176BB52C9B4EEE0005F0DD /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				21176BBF2C9B52D20005F0DD /* ForecastServiceMock.swift */,
 				21176BB82C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift */,
 				21176BB62C9B4EEE0005F0DD /* PersistenceMock.swift */,
 				21176BB42C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift */,
@@ -313,8 +318,9 @@
 		214E35E02C95CAF2008E6220 /* WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				21176BB52C9B4EEE0005F0DD /* Mocks */,
+				21176BBD2C9B52780005F0DD /* CityDetailsViewControllerTests.swift */,
 				21176BB72C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift */,
+				21176BB52C9B4EEE0005F0DD /* Mocks */,
 			);
 			path = WeatherTests;
 			sourceTree = "<group>";
@@ -592,9 +598,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21176BC02C9B52D70005F0DD /* ForecastServiceMock.swift in Sources */,
 				21176BB92C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift in Sources */,
 				21176BBA2C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift in Sources */,
 				21176BBB2C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift in Sources */,
+				21176BBE2C9B527B0005F0DD /* CityDetailsViewControllerTests.swift in Sources */,
 				21176BBC2C9B4EEE0005F0DD /* PersistenceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
