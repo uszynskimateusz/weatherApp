@@ -12,9 +12,9 @@ final class CityDetailsViewLayout: UIView {
     private let stackView = UIStackView()
     private let headlineLabel = UILabel()
     private let maxTemperatureLabel = UILabel()
+    private let temperatureLabel = UILabel()
     private let minTemperatureLabel = UILabel()
-    private let nextDaysLabel = UILabel()
-    private let nextDaysStackView = UIStackView()
+    private let nextDaysForecast = NextDaysForecast()
 
     init() {
         super.init(frame: .zero)
@@ -34,15 +34,10 @@ final class CityDetailsViewLayout: UIView {
         if let todayForecast = forecast.dailyForecasts.first(where: { $0.isToday }) {
             maxTemperatureLabel.textColor = todayForecast.maximumTemperatureColor
             maxTemperatureLabel.text = todayForecast.maximumTemperature
-            minTemperatureLabel.textColor = todayForecast.minimumTemperatureColor
-            minTemperatureLabel.text = todayForecast.minimumTemperature
+            minTemperatureLabel.attributedText = buildAttributedText(forecast: todayForecast)
         }
 
-        forecast.dailyForecasts.filter { !$0.isToday }.forEach { day in
-            let dayForecast = DayForecast()
-            dayForecast.configure(temperature: day.maximumTemperature, date: day.formattedDateValue)
-            nextDaysStackView.addArrangedSubview(dayForecast)
-        }
+        nextDaysForecast.configure(with: forecast.dailyForecasts.filter { !$0.isToday })
     }
 
     private func setup() {
@@ -52,8 +47,7 @@ final class CityDetailsViewLayout: UIView {
         setupHeadlineLabel()
         setupMaxTemperatureLabel()
         setupMinTemperatureLabel()
-        setupNextDaysLabel()
-        setupNextDaysStackView()
+        setupNextDaysForecast()
     }
 
     private func setupStackView() {
@@ -91,31 +85,37 @@ final class CityDetailsViewLayout: UIView {
     private func setupMinTemperatureLabel() {
         stackView.addArrangedSubview(minTemperatureLabel)
 
-        minTemperatureLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         minTemperatureLabel.numberOfLines = 0
         minTemperatureLabel.textAlignment = .center
     }
 
-    private func setupNextDaysLabel() {
-        stackView.addArrangedSubview(nextDaysLabel)
+    private func setupNextDaysForecast() {
+        stackView.addArrangedSubview(nextDaysForecast)
 
-        nextDaysLabel.text = Strings.nextDays
-        nextDaysLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        nextDaysLabel.numberOfLines = 0
-        nextDaysLabel.textAlignment = .center
-    }
-
-    private func setupNextDaysStackView() {
-        stackView.addArrangedSubview(nextDaysStackView)
-
-        nextDaysStackView.translatesAutoresizingMaskIntoConstraints = false
-        nextDaysStackView.distribution = .fillEqually
-        nextDaysStackView.alignment = .center
+        nextDaysForecast.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            nextDaysStackView.heightAnchor.constraint(equalToConstant: 50),
-            nextDaysStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: Constants.margin),
-            nextDaysStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -Constants.margin)
+   /*         nextDaysForecast.heightAnchor.constraint(equalToConstant: 50)*/
+            nextDaysForecast.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: Constants.margin),
+            nextDaysForecast.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -Constants.margin)
         ])
     }
+
+    private func buildAttributedText(forecast: DailyForecast) -> NSAttributedString {
+        let minimumTemperature = NSMutableAttributedString(
+            string: Strings.minimumTemperature,
+            attributes: [
+                .font: UIFont.systemFont(ofSize: 20, weight: .bold),
+                .foregroundColor: UIColor.black
+            ])
+        let temperature = NSAttributedString(
+            string: forecast.minimumTemperature,
+            attributes: [
+                .font: UIFont.systemFont(ofSize: 20, weight: .bold),
+                .foregroundColor: forecast.minimumTemperatureColor
+            ])
+        minimumTemperature.append(temperature)
+        return minimumTemperature
+    }
+
 }
