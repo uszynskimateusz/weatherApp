@@ -1,8 +1,5 @@
 //
 //  AutocompleteCitiesService.swift
-//  Weather
-//
-//  Created by Mateusz Uszyński on 18/09/2024.
 //
 
 public protocol AutocompleteCitiesServiceProtocol {
