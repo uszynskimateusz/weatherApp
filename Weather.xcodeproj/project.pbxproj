@@ -35,11 +35,15 @@
 		21176BA42C9B37F10005F0DD /* SearchCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BA32C9B37E90005F0DD /* SearchCity.swift */; };
 		21176BA62C9B44D80005F0DD /* WeatherConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BA52C9B44BB0005F0DD /* WeatherConditions.swift */; };
 		21176BA82C9B45B40005F0DD /* WeatherConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BA72C9B45B10005F0DD /* WeatherConditionView.swift */; };
+		21176BAB2C9B4AAB0005F0DD /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 21176BAA2C9B4AAB0005F0DD /* SnapshotTesting */; };
+		21176BB92C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB42C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift */; };
+		21176BBA2C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB72C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift */; };
+		21176BBB2C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB82C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift */; };
+		21176BBC2C9B4EEE0005F0DD /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21176BB62C9B4EEE0005F0DD /* PersistenceMock.swift */; };
 		214E35CB2C95CAF1008E6220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CA2C95CAF1008E6220 /* AppDelegate.swift */; };
 		214E35CD2C95CAF1008E6220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */; };
 		214E35D42C95CAF1008E6220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D32C95CAF1008E6220 /* Assets.xcassets */; };
 		214E35D72C95CAF1008E6220 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 214E35D62C95CAF1008E6220 /* Base */; };
-        214E35E22C95CAF2008E6220 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E35E12C95CAF2008E6220 /* WeatherTests.swift */; };
 		21936A8A2C95E78400ED09CC /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21936A892C95E78400ED09CC /* WelcomeCoordinator.swift */; };
 		21936A8E2C95E7D100ED09CC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21936A8D2C95E7D100ED09CC /* WelcomeViewController.swift */; };
 		21936A902C95E82F00ED09CC /* WelcomeViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21936A8F2C95E82F00ED09CC /* WelcomeViewLayout.swift */; };
@@ -101,6 +105,10 @@
 		21176BA32C9B37E90005F0DD /* SearchCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCity.swift; sourceTree = "<group>"; };
 		21176BA52C9B44BB0005F0DD /* WeatherConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditions.swift; sourceTree = "<group>"; };
 		21176BA72C9B45B10005F0DD /* WeatherConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionView.swift; sourceTree = "<group>"; };
+		21176BB42C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteCitiesServiceMock.swift; sourceTree = "<group>"; };
+		21176BB62C9B4EEE0005F0DD /* PersistenceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMock.swift; sourceTree = "<group>"; };
+		21176BB72C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		21176BB82C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModelDelegateMock.swift; sourceTree = "<group>"; };
 		214E35C72C95CAF1008E6220 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214E35CA2C95CAF1008E6220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214E35CC2C95CAF1008E6220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +116,6 @@
 		214E35D62C95CAF1008E6220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		214E35D82C95CAF1008E6220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214E35DD2C95CAF2008E6220 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		214E35E12C95CAF2008E6220 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		214E35E72C95CAF2008E6220 /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21936A892C95E78400ED09CC /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		21936A8D2C95E7D100ED09CC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21176BAB2C9B4AAB0005F0DD /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +260,16 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+		21176BB52C9B4EEE0005F0DD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				21176BB82C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift */,
+				21176BB62C9B4EEE0005F0DD /* PersistenceMock.swift */,
+				21176BB42C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		214E35BE2C95CAF1008E6220 = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +313,8 @@
 		214E35E02C95CAF2008E6220 /* WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				214E35E12C95CAF2008E6220 /* WeatherTests.swift */,
+				21176BB52C9B4EEE0005F0DD /* Mocks */,
+				21176BB72C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift */,
 			);
 			path = WeatherTests;
 			sourceTree = "<group>";
@@ -478,6 +497,9 @@
 				Base,
 			);
 			mainGroup = 214E35BE2C95CAF1008E6220;
+			packageReferences = (
+				21176BA92C9B4AAB0005F0DD /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 214E35C82C95CAF1008E6220 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -570,7 +592,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				214E35E22C95CAF2008E6220 /* WeatherTests.swift in Sources */,
+				21176BB92C9B4EEE0005F0DD /* AutocompleteCitiesServiceMock.swift in Sources */,
+				21176BBA2C9B4EEE0005F0DD /* WelcomeViewControllerTests.swift in Sources */,
+				21176BBB2C9B4EEE0005F0DD /* WelcomeViewModelDelegateMock.swift in Sources */,
+				21176BBC2C9B4EEE0005F0DD /* PersistenceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,7 +819,6 @@
 		214E35F52C95CAF2008E6220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -818,7 +842,6 @@
 		214E35F62C95CAF2008E6220 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -842,7 +865,6 @@
 		214E35F82C95CAF2008E6220 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 472H4G3TC9;
@@ -865,7 +887,6 @@
 		214E35F92C95CAF2008E6220 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 472H4G3TC9;
@@ -925,6 +946,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21176BA92C9B4AAB0005F0DD /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21176BAA2C9B4AAB0005F0DD /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21176BA92C9B4AAB0005F0DD /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 214E35BF2C95CAF1008E6220 /* Project object */;
 }
