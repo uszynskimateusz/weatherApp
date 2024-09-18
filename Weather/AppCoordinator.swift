@@ -20,6 +20,7 @@ class AppCoordinator: BaseCoordinator {
 
         let coordinator = WelcomeCoordinator()
         let navigationController = UINavigationController()
+        navigationController.navigationBar.prefersLargeTitles = true
         coordinator.navigationController = navigationController
         start(coordinator: coordinator)
 
