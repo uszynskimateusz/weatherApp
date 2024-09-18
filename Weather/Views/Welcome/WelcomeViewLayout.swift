@@ -56,7 +56,7 @@ final class WelcomeViewLayout: UIView {
         searchInput.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            searchInput.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            searchInput.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Constants.margin),
             searchInput.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.margin),
             searchInput.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.margin)
         ])
